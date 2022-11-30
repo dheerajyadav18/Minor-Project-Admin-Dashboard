@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/style.css"> -->
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2{
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p{
+  margin: 10px, 0;
+}
+
+img{
+  width: 100%;
+}
+
+/* NavBar */
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  margin: 0, 30px;
+  top: 0px;
+}
+
+
+
+.navbar a{
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0px 5px;
+}
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar a:hover{
+  border-bottom: #28a745 2px solid;
+}
+.navbar .top{
+  background: transparent;
+}
+
+.logo{
+  font-weight: 400;
+}
+
+.hero{
+  background: url('https://images.unsplash.com/photo-1669158424143-3be4e002b36d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero.blog{
+  background: url(/blog.jpg) no-repeat center center/cover;
+  height: 30vh;
+}
+
+.hero .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 , 20px;
+}
+
+.hero .content h1{
+  font-size: 55px;
+}
+
+.hero .content p{
+  font-size: 20px;
+  max-height: 600px;
+  margin: 15px 0 30px;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero *{
+  z-index: 10;
+}
+
+.icons{
+  padding: 30px;
+}
+
+.icons h3{
+  font-weight: bold;
+  margin-bottom: 15px;
+
+}
+
+.icons i {
+   background-color: #28a745;
+   color: #fff;
+   padding: 1rem;
+   border-radius: 50%;
+   margin-bottom: 15px;
+}
+
+.cases img:hover{
+  opacity: 0.6%;
+}
+
+.callback-form{
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control{
+  margin-bottom: 15px;
+}
+
+.callback-form input{
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form .btn{
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+.post{
+  padding: 50px 30px;
+}
+.post h2{
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: #ccc solid 1px;
+}
+.post .meta{
+  margin-bottom: 30px;
+}
+.post img{
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+
+}
+
+.footer a {
+  color: #fff;
+}
+.footer p{
+  color: #fff;
+}
+
+.bg-dark{
+  background: #333;
+  color: #fff;
+}
+
+.footer a:hover{
+  color: #28a745;
+}
+
+.footer .social > *{
+  margin-right: 20px;
+}
+
+/* Mobile */
+@media(max-width: 768px){
+  .navbar{
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+  .navbar a{
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+  .flex-items{
+    flex-direction: column;
+  }
+  .flex-columns .column, .flex-grid .column{
+    flex: 100px;
+    max-width: 100%;
+  }
+  .team img{
+    width: 70%;
+  }
+}
+/* Text Styles */
+
+.text-primary{
+  color: #28a745;
+}
+
+.text-secondary{
+  color: #0284d0;
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+
+.flex-items{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.flex-items > div{
+  padding: 20px;
+}
+
+.flex-columns.flex-reverse .row{
+  flex-direction: row-reverse;
+}
+
+.flex-columns .row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+  height: 100%;
+}
+
+.bg-primary{
+  background: #28a745;
+  color: #fff;
+}
+.bg-light{
+  background: #fff;
+  color: #333;
+}
+
+.flex-columns img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-columns .column-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+.flex-columns h2{
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-columns h4{
+  margin-bottom: 10px;
+}
+
+.flex-columns p{
+  margin: 20px 0;
+}
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.section-header{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-header h2{
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding{
+  padding: 20px 20px 40px;
+}
+
+.flex-grid .row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.flex-grid .column{
+   flex: 25%;
+   max-width: 25%;
+   padding: 0 4px;
+   
+}
+ </style>
+</head>
+<body id="home">
+  <header class="hero">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i>
+          Dhee</span>Raj
+      </h1>
+      <nav>
+        <ul>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#cases">Cases</a></li>
+         <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>The SKY is The Limit!</h1>
+      <p>We Provide World Class Financial Assistance!</p>
+      <a href="#About" class="btn"><i class="fas fa-chevron-right"></i>Read More</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="icons bg-light">
+      <div class="flex-items">
+        <div>
+          <i class="fas fa-university fa-2x"></i>
+          <div>
+            <h3>Investment Banking</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, ipsa?</p>
+          </div>
+        </div>
+        <div>
+          <i class="fas fa-book-reader fa-2x"></i>
+          <div>
+            <h3>Portfolio Manager</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, ipsa?</p>
+          </div>
+        </div>
+        <div>
+          <i class="fas fa-pencil-alt fa-2x"></i>
+          <div>
+            <h3>Tax and Custodial</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, ipsa?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- solution -->
+    <section class="solutions flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="/financialImgs/home/people.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-primary">
+          <h4>What you are looking for</h4>
+          <h2>We Provide best solutions</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem fugiat possimus a architecto quae cupiditate maxime totam eius nesciunt.</p>
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-chevron"></i>
+            Read More
+          </a>
+          </div>
+      </div>
+    </section>
+
+    <section id="cases" class="cases flex-grid section-padding">
+      <header class="section-header">
+        <h4>This is what we do</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, vel.</p>
+
+      </header>
+      <div class="row">
+        <div class="column">
+          <img src="/financialImgs/cases/cases1.jpg" alt="">
+          <img src="/financialImgs/cases/cases2.jpg" alt="">
+
+        </div>
+
+        <div class="column">
+          <img src="/financialImgs/cases/cases3.jpg" alt="">
+          <img src="/financialImgs/cases/cases4.jpg" alt="">
+
+        </div>
+
+        <div class="column">
+          <img src="/financialImgs/cases/cases5.jpg" alt="">
+          <img src="/financialImgs/cases/cases6.jpg" alt="">
+
+        </div>
+
+        <div class="column">
+          <img src="/financialImgs/cases/cases7.jpg" alt="">
+          <img src="/financialImgs/cases/cases8.jpg" alt="">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog flex-columns flex-reverse">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="/financialImgs/home/blog.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-primary">
+          <h4>April 16 2020</h4>
+          <h2>Blog Post One</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem fugiat possimus a architecto quae cupiditate maxime totam eius nesciunt.</p>
+          <a href="#home" class="btn btn-outline">
+            <i class="fas fa-chevron"></i>
+            Read Our Blog
+          </a>
+          </div>
+      </div>
+    </section>
+
+    <section id="team" class="team section-padding">
+      <header class="section-header">
+        <h4>Who we are</h4>
+        <h2>Our Professional Team</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, vel.</p>
+
+      </header>
+
+      <div class="flex-items">
+        <div>
+          <img src="/financialImgs/team/person1.jpg" alt="">
+          <h4>john Doe</h4>
+          <p>President</p>
+        </div>
+        <div>
+          <img src="/financialImgs/team/person2.jpg" alt="">
+          <h4>Jane Doe</h4>
+          <p>vice President</p>
+        </div>
+        <div>
+          <img src="/financialImgs/team/person3.jpg" alt="">
+          <h4>Smith Watt</h4>
+          <p>Marketing Head</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="contact flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="/financialImgs/home/contact.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-primary">
+            <h2>Request Callback</h2>
+            <form action="" class="callback-form">
+              <div class="form-control">
+                <label for="name"></label>
+                <input type="text" name="name" id="name"
+                placeholder="Enter name">
+              </div>
+              <div class="form-control">
+                <label for="email"></label>
+                <input type="email" name="email" id="email"
+                placeholder="Enter email">
+              </div>
+              <div class="form-control">
+                <label for="phone"></label>
+                <input type="text" name="phone" id="phone"
+                placeholder="Enter phone">
+              </div>
+              <input type="submit" value="Send" id="submit" class="btn">
+            </form>
+          </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer bg-dark">
+   <div class="social">
+    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+    <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+   </div>
+   <p>Copyright &copy; 2023 - DheeRaj</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.onscroll = function(){
+      if(window.pageYOffset > 100){
+        navbar.classList.remove('top');
+      }else{
+        navbar.classList.add('top');
+      }
+    }
+  </script>
+
+</body> 
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome">
+  <meta name="keyword" content="">
+  <style>
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+h1,h2,h3{
+  padding-bottom: 20px;
+}
+
+p{
+  margin: 10px 0;
+}
+
+.container{
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+
+}
+.text-primary{
+  color: #f7c08a;
+}
+.lead{
+  font-size: 20px;
+}
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover{
+  background: #f7c08a;
+  color: #333;
+}
+
+.btn-light{
+  background: #f4f4f4;
+  color: #333;
+  margin: 15px;
+  padding: 15px;
+}
+.bg-dark{
+  background: #333;
+  color: #fff;
+}
+.bg-light{
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-primary{
+  background: #333;
+  color: #f7c08a;
+}
+.clr{
+  float: both;
+}
+.l-heading{
+  font-size: 40px;
+}
+.py-1{
+  padding: 10px 0;
+}
+.py-2{
+  padding: 20px 0;
+}.py-3{
+  padding: 30px 0;
+}
+#navbar{
+  background: #333;
+  color: #fff;
+  overflow: auto;
+}
+#navbar a{
+  color:#fff;
+}
+#navbar h1{
+  float: left;
+  padding-top: 20px;
+}
+#navbar ul{
+  list-style: none;
+  float: right;
+}
+#navbar ul li{
+  float: left;
+}
+#navbar ul li a{
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+#navbar ul li a:hover,
+#navbar ul li a.current{
+  background: #444;
+  color: #f7c08a;
+}
+
+.box{
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
+}
+.box i {
+  margin-bottom: 10px;
+}
+
+
+#contact-form .form-group{
+  margin-bottom: 20px;
+}
+#contact-form label{
+  display: block;
+  margin-bottom: 5px;
+}
+#contact-form input,
+#contact-form textarea{
+  width:100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+}
+#contact-form textarea{
+  height: 200px;
+}
+#contact-form input,
+#contact-form textarea:focus{
+  outline: none;
+  border-color: #f7c08a;
+}
+  </style>
+</head>
+<body>
+  
+  
+  <section id="contact-form" class="py-3">
+    <div class="container">
+      <!-- <h1 class="l-heading"> <span class="text-primary">contact</span>Us</h1> -->
+      <p>Please Fill Out the form below contact us</p>
+      <form action="process.php">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

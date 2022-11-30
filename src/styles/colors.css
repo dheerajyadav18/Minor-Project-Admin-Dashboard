@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #fff;
+        --border-color: #e7ebf0;
+        --backup-background: ##0b1929;
+        --background-color-grad: linear-gradient(to right, #41295a, #2f0743); 
+        --text-color: #000;
+    }
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0b1929;
+        --text-color: #fff;
+        --border-color: #e7ebf0;
+    }
+}

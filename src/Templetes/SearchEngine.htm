@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Search Engine By Dheeraj!</title>
+  <link rel="icon" href="/icons/home.png">
+  <!-- <link rel="stylesheet" href="../styles/Search_engine.css"> -->
+  <script src="https://kit.fontawesome.com/44434e820e.js" crossorigin="anonymous"></script>
+  <style>
+ body {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-family: 'Cantarell';
+  background-color: #000000;
+  /* box-sizing: border-box; */
+  position: relative;
+  top: 30%;
+  /* transform: translateY(-50%); */
+  /* border-radius: 40px; */
+}
+
+ h1 {
+  color: #9a9b9c;
+  font-size: 75px;
+  animation: glitch 1s linear infinite;
+}
+
+ .search_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 120px;
+  transition: box-shadow 0.5s;
+}
+ input {
+    color: #eceff4;
+    background-color: #333;
+    width: 700px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    vertical-align: top;
+    outline: none;
+}
+.SearchEngineAll input:focus::placeholder {
+    color: transparent;
+}
+.SearchEngineAll button {
+    width: 50px;
+    height: 50px;
+    background: #333;
+    vertical-align: top;
+    border: none;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+.SearchEngineAll button:hover {
+    background-color: #81a1c1;
+    color: #eceff4;
+}
+.SearchEngineAll .go {
+    color: #eceff4;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.SearchEngineAll .go:hover {
+    color: #333;
+}
+.SearchEngineAll .se_btn {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;  
+}
+.SearchEngineAll #se_icon {
+    width: 24px;
+    height: 24px;
+}
+.SearchEngineAll .filter-white {
+    filter: invert(1)
+}
+
+.SearchEngineAll .a1 { grid-area: a1; }
+.SearchEngineAll .a2 { grid-area: a2; }
+.SearchEngineAll .a3 { grid-area: a3; }
+.SearchEngineAll .a4 { grid-area: a4; }
+.SearchEngineAll .a5 { grid-area: a5; }
+.SearchEngineAll .a6 { grid-area: a6; }
+.SearchEngineAll .a7 { grid-area: a7; }
+.SearchEngineAll .a8 { grid-area: a8; }
+.SearchEngineAll .a9 { grid-area: a9; }
+.SearchEngineAll .a10 { grid-area: a10; }
+.SearchEngineAll .a11 { grid-area: a11; }
+.SearchEngineAll .a12 { grid-area: a12; }
+.SearchEngineAll .a13 { grid-area: a13; }
+.SearchEngineAll .a14 { grid-area: a14; }
+.SearchEngineAll .a15 { grid-area: a15; }
+
+
+.SearchEngineAll ul {
+  margin-top: 320px;
+  padding: 0px;
+  display: grid;
+  grid-template-areas:
+    ' a1 a2 a3 a4 a5'
+    ' a9 a6 a7 a8 a10'
+    ' a11 a12 a13 a14 a15';
+  grid-gap: 19px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.SearchEngineAll ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.SearchEngineAll ul li a {
+  position: relative; 
+  display: block;
+  width: 220px;
+  height: 105px;
+  text-align: center;
+  line-height: 108px;
+  background: #333;
+  border-radius: 6%;
+  font-size: 40px;
+  color: #666;
+  transition: .5s;
+
+}
+
+.SearchEngineAll ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  background: rgb(255, 254, 254);
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.SearchEngineAll ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.SearchEngineAll ul li a:hover {
+  color: #ccccca;
+  box-shadow: 0 0 5px #dddddd;
+  text-shadow: 0 0 5px #dddddc;
+}
+
+  </style>
+
+</head>
+<body>
+  <div class="SearchEngineAll">
+<h1 id="time">Hello Dheeraj!</h1>
+
+<div class="search_block">
+  <form id="search_eng_form" method="get" action="https://www.google.com/search?q=">
+      <button type="button" class="se_btn" id="se_button"><img id="se_icon" src="/icons/goog.svg" class="filter-white"></button><input type="search" id="search" placeholder="Searching with Dheeraj!!" autocomplete="off" name="q" autofocus><button type="submit" class="go" id="go_btn">GO</button>
+  </form>
+</div>
+
+
+<ul>
+  <li>
+    <div class="a1">
+      <a href="https://instagram.com">
+        <i class="fab fa-instagram"></i>       
+      </a>
+    </div>
+  </li>
+  <li>
+    <div class="a2">
+      <a href="https://www.twitter.com">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </li>
+  <li>
+    <div class="a4">
+      <a href="https://www.youtube.com">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </li>
+  
+  <li>
+    <div class="a14">
+      <a href="https://web.whatsapp.com/">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </li>
+  <li>
+    <div class="a15">
+      <a href="https://www.gmail.com">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+  </li>
+  <li>
+  </div>
+<script async type="text/javascript" src="../../public/js/Search_engine.js"></script>
+</body>
+</html>
+     
