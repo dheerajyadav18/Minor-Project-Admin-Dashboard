@@ -3,10 +3,10 @@ import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwit
 import './footer.css'
 
 const Footer = () => (
-  <div className="mt-24">
+    <div className="mt-24">
 
-<div>
-            <footer className="bootomfoot rounded-full text-center "  id="#bottomfooter">
+        <div>
+            <footer className="bootomfoot rounded-full text-center " id="#bottomfooter">
                 <div className="bottomfootcontainer">
                     <div className="bottomfoot-row">
                         <div className="bootomfoot-col">
@@ -60,11 +60,11 @@ const Footer = () => (
 
         </div>
 
-    <p className="dark:text-gray-200 text-gray-700 text-center m-20">
-      © 2022 All rights reserved by Pay_Attention.com
-    </p>
+        <p className="dark:text-gray-200 text-gray-700 text-center m-20">
+            © 2023 All rights reserved by Pay_Attention.com
+        </p>
 
-  </div>
+    </div>
 );
 
 export default Footer;

@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import {ModifiedHome} from '../pages/ModifiedHome.jsx';
+import { ModifiedHome } from '../pages/ModifiedHome.jsx';
 import { Button } from '../components';
-import {  dropdownData } from '../data/dummy';
+import { dropdownData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 import TechNewsLOGO from '../data/TechNewsLogo.PNG';
@@ -28,54 +28,54 @@ const DropDown = ({ currentMode }) => (
 
 const Home = () => {
   const { currentColor, currentMode } = useStateContext();
-  const { Apps, setApps } = useContext( AppsContext );
+  const { Apps, setApps } = useContext(AppsContext);
   console.log(Apps);
 
   return (
 
     <div>
-         <ModifiedHome />
-      
-    
-    <div className="mt-24 flex flex-auto flex-wrap pl-48 ">
+      <ModifiedHome />
 
-       {
-        Apps.learningapp && <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
-          <div className="flex justify-between">
-            <p className="text-xl font-bold">Learning App</p>
-            <button type="button" className="text-xl font-semibold text-gray-500">
-              <IoIosMore />
-            </button>
-          </div>
-          <div className="mt-10">
-            <img
-              className="md:w-96 h-50 "
-              src={product9}
-              alt=""
-            />
-            <div className="mt-8">
-              <p className="font-semibold text-lg">App to help for learning different things.</p>
-              <p className="mt-8 text-sm text-gray-400">
-                This will be the small description for the Learning App you have shown
-                here. There could be some great info.
-              </p>
-              <div className="mt-3">
-              <Link to={"/learning-app"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
-                </Link>
+
+      <div className="mt-24 flex flex-auto flex-wrap pl-48 ">
+
+        {
+          Apps.learningapp && <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+            <div className="flex justify-between">
+              <p className="text-xl font-bold">Learning App</p>
+              <button type="button" className="text-xl font-semibold text-gray-500">
+                <IoIosMore />
+              </button>
+            </div>
+            <div className="mt-10">
+              <img
+                className="md:w-96 h-50 "
+                src={product9}
+                alt=""
+              />
+              <div className="mt-8">
+                <p className="font-semibold text-lg">App to help for learning different things.</p>
+                <p className="mt-8 text-sm text-gray-400">
+                  This will be the small description for the Learning App you have shown
+                  here. There could be some great info.
+                </p>
+                <div className="mt-3">
+                  <Link to={"/learning-app"}>
+                    <Button
+                      color="white"
+                      bgColor={currentColor}
+                      text="Open"
+                      borderRadius="10px"
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-       }
-    
-      
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+
+        {
+        Apps.fitnessapp && <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Fitness App</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -95,20 +95,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/fitness-app"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/fitness-app"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.chatapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Chat App</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -128,20 +129,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/chat-app"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/chat-app"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.technewsapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Tech News App</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -161,20 +163,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/tech-news-Website"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/tech-news-Website"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.financial &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Financial Website </p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -194,20 +197,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/financial-website"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/financial-website"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.blogapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Personal Blog App</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -227,20 +231,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/personal-blog-app"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/personal-blog-app"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.quizapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Dheeraj Quiz</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -260,20 +265,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/dheeraj-quiz"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/dheeraj-quiz"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.pptapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Presentation Website</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -293,20 +299,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/presentation-website"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/presentation-website"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.searchapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Personal Search Engine</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -326,20 +333,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/search-engine"}>
-               <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/search-engine"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.aboutus &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">About Us</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -359,20 +367,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/about-us"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/about-us"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.contactus &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Contact Us</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -392,20 +401,21 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/contact-us"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/contact-us"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        }
+        {
+        Apps.taskapp &&<div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-bold">Task To Do</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -425,22 +435,22 @@ const Home = () => {
                 here. There could be some great info.
               </p>
               <div className="mt-3">
-              <Link to={"/task-to-do"}>
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Open"
-                  borderRadius="10px"
-                />
+                <Link to={"/task-to-do"}>
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Open"
+                    borderRadius="10px"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
+        }
       </div>
-      </div>
+    </div>
   );
 };
 
 export default Home;
-            
