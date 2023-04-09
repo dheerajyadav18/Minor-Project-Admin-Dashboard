@@ -23,15 +23,15 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-    
+
       <BrowserRouter>
         <Routes>
-        <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
       <BrowserRouter>
-      
+
 
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -76,7 +76,7 @@ const App = () => {
                 {/* dashboard  */}
                 {/* <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} /> */}
-                
+
                 <Route path="/" element={(<Home />)} />
                 <Route path="/home" element={(<Home />)} />
                 {/* <Route path="/login" element={(<Login />)} /> */}
