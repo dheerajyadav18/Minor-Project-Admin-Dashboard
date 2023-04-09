@@ -492,7 +492,7 @@ export const links = [
       },
 
       {
-        name: 'chat-app',
+        name: 'weather-app',
         icon: <AiOutlineWechat />,
       },
       {

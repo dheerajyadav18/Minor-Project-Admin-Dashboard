@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Home, SearchEngine, Calendar, ContactUs, AboutUs, Task, LearningApp, FitnessApp, PresentationWebsite, Financial, ColorPicker, Editor, RealTimeChatApp, TechNewsWebsite, PersonalBlogApp, DheerajQuiz } from './pages';
+import { Home, SearchEngine, Calendar, ContactUs, AboutUs, Task, LearningApp, FitnessApp, PresentationWebsite, Financial, ColorPicker, Editor, WeatherApp, TechNewsWebsite, PersonalBlogApp, DheerajQuiz, Login, Signup } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -23,7 +23,16 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
+    
       <BrowserRouter>
+        <Routes>
+        <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+      <BrowserRouter>
+      
+
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
@@ -65,10 +74,16 @@ const App = () => {
 
               <Routes>
                 {/* dashboard  */}
+                {/* <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} /> */}
+                
                 <Route path="/" element={(<Home />)} />
                 <Route path="/home" element={(<Home />)} />
+                {/* <Route path="/login" element={(<Login />)} /> */}
+                {/* <Route path="/signup" element={(<Signup />)} /> */}
 
                 {/* apps main  */}
+
                 <Route path="/search-engine" element={<SearchEngine />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/about-us" element={<AboutUs />} />
@@ -76,7 +91,7 @@ const App = () => {
                 {/* personal apps  */}
                 <Route path="/learning-app" element={<LearningApp />} />
                 <Route path="/fitness-app" element={<FitnessApp />} />
-                <Route path="/chat-app" element={<RealTimeChatApp />} />
+                <Route path="/weather-app" element={<WeatherApp />} />
                 <Route path="/presentation-website" element={<PresentationWebsite />} />
                 <Route path="/financial-website" element={<Financial />} />
                 <Route path="/tech-news-website" element={<TechNewsWebsite />} />
@@ -89,7 +104,7 @@ const App = () => {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
-                
+                {/* <Route path="/Signup" element={<Signup />} /> */}
 
               </Routes>
             </div>
@@ -102,4 +117,3 @@ const App = () => {
 };
 
 export default App;
-  

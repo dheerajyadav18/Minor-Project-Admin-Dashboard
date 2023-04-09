@@ -5,7 +5,7 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
+import {Link} from "react-router-dom";
 import avatar from '../data/avatar.jpg';
 import { Apps, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -74,15 +74,20 @@ const Navbar = () => {
                 Dheeraj
               </span>
             </p>
-            <MdKeyboardArrowDown className="text-gray-400 text-14" />
-          </div>
-        </TooltipComponent>
 
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
+
+          </div>
+
+        </TooltipComponent>
+        <div className="flex items-center gap-2 cursor-pointer p-2 bg-red-800 rounded-lg hover:bg-light-gray">
+          <span className="text-gray-400 font-bold text-14"><Link to="/login">Logout</Link></span>
+        </div>
         {isClicked.cart && (<Apps />)}
         {isClicked.chat && (<Chat />)}
         {isClicked.notification && (<Notification />)}
         {isClicked.userProfile && (<UserProfile />)}
-        
+
       </div>
     </div>
   );

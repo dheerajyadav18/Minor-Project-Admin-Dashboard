@@ -7,6 +7,7 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { cartData } from '../data/dummy';
 import { Button } from '.';
 
+
 const Apps = () => {
   const { Apps, setApps } = useContext(AppsContext);
 
@@ -57,18 +58,18 @@ const Apps = () => {
         ))}
         <div>
 
-          <div><input type={'checkbox'} name={'learningapp'} checked={Apps.learningapp} onChange={HandleCheckbox} /> Learning App </div>
-          <div><input type={'checkbox'} name={'fitnessapp'} checked={Apps.fitnessapp} onChange={HandleCheckbox} /> Fitness App </div>
-          <div><input type={'checkbox'} name={'chatapp'} checked={Apps.chatapp} onChange={HandleCheckbox}/> Chat App </div>
-          <div><input type={'checkbox'} name={'technewsapp'} checked={Apps.technewsapp} onChange={HandleCheckbox}/> Tech News App </div>
-          <div><input type={'checkbox'} name={'financial'} checked={Apps.financial} onChange={HandleCheckbox}/> Financial App </div>
-          <div><input type={'checkbox'} name={'blogapp'} checked={Apps.blogapp} onChange={HandleCheckbox}/> Blog App </div>
-          <div><input type={'checkbox'} name={'quizapp'} checked={Apps.quizapp} onChange={HandleCheckbox}/> Quiz App </div>
-          <div><input type={'checkbox'} name={'pptapp'} checked={Apps.pptapp} onChange={HandleCheckbox}/> Presentation App </div>
-          <div><input type={'checkbox'} name={'searchapp'} checked={Apps.searchapp} onChange={HandleCheckbox}/> SearchEngine App </div>
-          <div><input type={'checkbox'} name={'aboutus'} checked={Apps.aboutus} onChange={HandleCheckbox}/> AboutUS </div>
-          <div><input type={'checkbox'} name={'contactus'} checked={Apps.contactus} onChange={HandleCheckbox}/> ContactUS </div>
-          <div><input type={'checkbox'} name={'taskapp'} checked={Apps.taskapp} onChange={HandleCheckbox}/> Task To Do </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'learningapp'} checked={Apps.learningapp} onChange={HandleCheckbox} /> Learning App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'fitnessapp'} checked={Apps.fitnessapp} onChange={HandleCheckbox} /> Fitness App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'weatherapp'} checked={Apps.weatherapp} onChange={HandleCheckbox} /> Weather App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'technewsapp'} checked={Apps.technewsapp} onChange={HandleCheckbox} /> Tech News App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'financial'} checked={Apps.financial} onChange={HandleCheckbox} /> Financial App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'blogapp'} checked={Apps.blogapp} onChange={HandleCheckbox} /> Blog App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'quizapp'} checked={Apps.quizapp} onChange={HandleCheckbox} /> Quiz App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'pptapp'} checked={Apps.pptapp} onChange={HandleCheckbox} /> Presentation App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'searchapp'} checked={Apps.searchapp} onChange={HandleCheckbox} /> SearchEngine App </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'aboutus'} checked={Apps.aboutus} onChange={HandleCheckbox} /> AboutUS </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'contactus'} checked={Apps.contactus} onChange={HandleCheckbox} /> ContactUS </div>
+          <div className="pb-2" ><input className="cursor-pointer outline-double outline-offset-2 outline-blue-500 outline-4 mr-2" type={'checkbox'} name={'taskapp'} checked={Apps.taskapp} onChange={HandleCheckbox} /> Task To Do </div>
 
 
 
