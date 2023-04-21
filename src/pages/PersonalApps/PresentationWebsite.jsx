@@ -20,7 +20,7 @@ import pptwebsite from "../../Templetes/PptWebsite.htm"
 
 const PresentationWebsite = () => (
   <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-     <iframe name="report" height="650px" width="100%" src={pptwebsite} scrolling="no"  ></iframe>
+     <iframe name="report" height="650px" width="100%" src={pptwebsite} title='presentationwebsite' scrolling="no"  ></iframe>
   </div>
 );
 

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosMore } from 'react-icons/io';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+
 import { ModifiedHome } from '../pages/ModifiedHome.jsx';
 import { Button } from '../components';
-import { dropdownData } from '../data/dummy';
+
 import { useStateContext } from '../contexts/ContextProvider';
 import LearningLOGO from '../data/LearningPNg.PNG';
 import FitnessLOGO from '../data/FitnessPng.PNG';
@@ -22,15 +22,11 @@ import AppsContext from '../Context/AppsContext';
 
 // import SearchEngine from './SearchEngine.jsx';
 
-const DropDown = ({ currentMode }) => (
-  <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
-    <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
-  </div>
-);
+
 
 const Home = () => {
-  const { currentColor, currentMode } = useStateContext();
-  const { Apps, setApps } = useContext(AppsContext);
+  const { currentColor } = useStateContext();
+  const { Apps } = useContext(AppsContext);
   console.log(Apps);
 
   return (
