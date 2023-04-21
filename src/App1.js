@@ -4,7 +4,6 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Home, SearchEngine, Calendar, ContactUs, AboutUs, Task, LearningApp, FitnessApp, PresentationWebsite, Financial, ColorPicker, Editor, WeatherApp, TechNewsWebsite, PersonalBlogApp, DheerajQuiz, Login, Signup } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';

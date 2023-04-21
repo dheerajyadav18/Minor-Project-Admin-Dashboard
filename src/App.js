@@ -1,17 +1,14 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import { FiSettings } from 'react-icons/fi';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import App1 from "./App1";
-
-import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Home, SearchEngine, Calendar, ContactUs, AboutUs, Task, LearningApp, FitnessApp, PresentationWebsite, Financial, ColorPicker, Editor, WeatherApp, TechNewsWebsite, PersonalBlogApp, DheerajQuiz, Login, Signup } from './pages';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import App1 from "./App1";
+import { Home, SearchEngine, Calendar, ContactUs, AboutUs, Task, LearningApp, FitnessApp, PresentationWebsite, Financial, ColorPicker, Editor, WeatherApp, TechNewsWebsite, PersonalBlogApp, DheerajQuiz, Login, Signup } from './pages';
 
 import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
-  const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  const { setCurrentColor, setCurrentMode, currentMode } = useStateContext();
 
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
@@ -25,28 +22,16 @@ const App = () => {
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
 
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-  </BrowserRouter>*/}
       <BrowserRouter>
-
         <Routes>
-
           <Route path="/signup" exact element={<Signup />} />
           <Route path="/login" exact element={<Login />} />
           <Route path='' element={<App1 />}>
             <Route path="/" element={(<Home />)} />
             <Route path="/home" element={(<Home />)} />
-  
-
             <Route path="/search-engine" element={<SearchEngine />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/about-us" element={<AboutUs />} />
-
-
             <Route path="/learning-app" element={<LearningApp />} />
             <Route path="/fitness-app" element={<FitnessApp />} />
             <Route path="/weather-app" element={<WeatherApp />} />
@@ -60,7 +45,6 @@ const App = () => {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/color-picker" element={<ColorPicker />} />
           </Route>
-
         </Routes>
 
       </BrowserRouter>

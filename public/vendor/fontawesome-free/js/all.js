@@ -3,7 +3,7 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 (function () {
-  'use strict';
+
 
   var _WINDOW = {};
   var _DOCUMENT = {};
@@ -556,7 +556,7 @@
 
 }());
 (function () {
-  'use strict';
+
 
   var _WINDOW = {};
   var _DOCUMENT = {};
@@ -832,7 +832,7 @@
 
 }());
 (function () {
-  'use strict';
+
 
   var _WINDOW = {};
   var _DOCUMENT = {};
@@ -1913,7 +1913,7 @@
 
 }());
 (function () {
-  'use strict';
+
 
   function _typeof(obj) {
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
