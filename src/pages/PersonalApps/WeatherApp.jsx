@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './css/weatherapp.css';
 
-const WeatherApp = () => {
+const WeatherApp =()=>{
 
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Mumbai");
