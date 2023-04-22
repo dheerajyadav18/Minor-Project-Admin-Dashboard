@@ -5,7 +5,7 @@ It is a dashboard which contain different types of applications. By this, we can
 ![](/public/readme/Admin%20Dashboard.gif)
 ## View live demo [here](https://minor-project-admin-dashboard.vercel.app/).
 
-# Admin Dashboard Snap Shots :pictures
+# Admin Dashboard Snap Shots 🖼️
 
 ![AdminDashboard](/public/readme/Home.PNG)
 
