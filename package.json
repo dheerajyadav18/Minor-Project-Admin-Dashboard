@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.11",
     "@syncfusion/ej2": "^20.3.52",
+    "@syncfusion/ej2-base": "^21.1.40",
     "@syncfusion/ej2-react-calendars": "^20.3.50",
     "@syncfusion/ej2-react-charts": "^20.3.52",
     "@syncfusion/ej2-react-dropdowns": "^20.3.50",
