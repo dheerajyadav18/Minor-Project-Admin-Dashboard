@@ -6,7 +6,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
   (factory((global['fontawesome-free-conflict-detection'] = {})));
-}(this, (function (exports) { 'use strict';
+}(this, (function (exports) { 
 
   function _typeof(obj) {
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
